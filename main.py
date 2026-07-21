@@ -31,7 +31,7 @@ while True:
 
     choice = input("enter choice:")
     if choice =="1":
-        name =int(input("enter name:"))
+        name =input("enter name:")
 
     
         try:
@@ -39,7 +39,7 @@ while True:
         except ValueError:
             print("please enter numbers only")
 
-        roll=int(input("enter roll:"))
+        
         duplicate=False
         for st in students:
             if st.roll==roll:
@@ -124,7 +124,9 @@ while True:
  
         if str(s.roll)==roll:
                 print("\n=====result=====")
-                print("name,s.name,roll,s.roll,total,s.total_marks()")
+                print("name:",s.name) 
+                print("roll:",s.roll)
+                print("total:",s.total_marks())
                 print("percentage:",s.percentage())
                 print("result:",s.result())
                 print("grade:",s.grade())
@@ -151,7 +153,7 @@ while True:
 
             for st in students:
                 data.append({
-                    "name":st.namr,
+                    "name":st.name,
                     "roll":st.roll,
                     "maths":st.maths,
                     "science":st.science,
@@ -177,5 +179,6 @@ while True:
 
     else:
       print("invalid choice")
+      
 
     
